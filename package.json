@@ -15,7 +15,16 @@
     "moment": "^2.24.0",
     "moment-range": "^4.0.2"
   },
+  "compierOptions": {
+    "lib": [
+      "es2015",
+      "es2015.iterable",
+      "dom"
+    ]
+  },
   "devDependencies": {
+    "@types/moment-range": "^4.0.0",
+    "@types/node": "^13.1.0",
     "typescript": "^3.7.4"
   }
 }

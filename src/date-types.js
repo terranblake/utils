@@ -1,9 +1,9 @@
 "use strict";
 var _this = this;
 exports.__esModule = true;
-var Moment = require("moment");
+var _moment = require("moment");
 var moment_range_1 = require("moment-range");
-var moment = moment_range_1.extendMoment(Moment);
+var moment = moment_range_1.extendMoment(_moment);
 exports.quarters = [
     // quarter 1 usually spans January 1-March 31;
     [moment("2019-01-01T00:00:00.000").year(1990), moment("2019-03-31T23:59:59.999").year(1990)],

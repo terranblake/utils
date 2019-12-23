@@ -1,7 +1,7 @@
-import * as Moment from 'moment';
+import * as _moment from 'moment';
 import { extendMoment } from 'moment-range';
 
-const moment = extendMoment(Moment);
+const moment = extendMoment(_moment);
 
 export const quarters = [
 	// quarter 1 usually spans January 1-March 31;
