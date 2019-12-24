@@ -3,7 +3,7 @@ import { extendMoment } from 'moment-range';
 
 const moment = extendMoment(_moment);
 
-export const quarters = [
+const quarters = [
 	// quarter 1 usually spans January 1-March 31;
 	[moment("2019-01-01T00:00:00.000").year(1990), moment("2019-03-31T23:59:59.999").year(1990)],
 	// quarter 2 usually spans April 1-June 30;
@@ -14,7 +14,7 @@ export const quarters = [
 	[moment("2019-10-01T00:00:00.000").year(1990), moment("2019-12-31T23:59:59.999").year(1990)],
 ]
 
-export const getMostIntersectedRange = (inputRange, ranges) => {
+const getMostIntersectedRange = (inputRange, ranges) => {
 	const overlaps = {};
 	for (let r in ranges) {
 		const [start, end] = ranges[r];
@@ -38,7 +38,7 @@ export const getMostIntersectedRange = (inputRange, ranges) => {
 	return result;
 }
 
-export const getDateType = (value) => {
+const getDateType = (value) => {
 	if (!value.startDate) {
 		return 'instant';
 	}
@@ -56,7 +56,7 @@ export const getDateType = (value) => {
 	return 'year';
 }
 
-export const getYearReported = (value, dateType) => {
+const getYearReported = (value, dateType) => {
 	if (!dateType) {
 		dateType = this.getDateType(value);
 	}
@@ -90,7 +90,7 @@ export const getYearReported = (value, dateType) => {
 		: endDate.year();
 }
 
-export const getQuarterReported = (value, dateType) => {
+const getQuarterReported = (value, dateType) => {
 	if (!dateType) {
 		dateType = this.getDateType(value);
 	}
@@ -105,4 +105,12 @@ export const getQuarterReported = (value, dateType) => {
 
 	const reportedRange = moment.range([moment(value.startDate), moment(value.endDate)]);
 	return Number(this.getMostIntersectedRange(reportedRange, quarters));
+}
+
+export default {
+	quarters,
+	getDateType,
+	getYearReported,
+	getQuarterReported,
+	getMostIntersectedRange
 }
