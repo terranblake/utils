@@ -2,8 +2,8 @@
 exports.__esModule = true;
 var dateTypes = require("./src/date-types");
 exports.dateTypes = dateTypes;
-var logging = require("./src/logging");
-exports.logging = logging;
+var logger_1 = require("./src/logger");
+exports.logger = logger_1["default"];
 var parsing_options_1 = require("./src/parsing-options");
 exports.parserOptions = parsing_options_1["default"];
 var enums_1 = require("./src/enums");
