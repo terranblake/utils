@@ -45,9 +45,12 @@ exports["default"] = (function (model, ticker, accessionNumber) { return __await
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
+                if (!model) {
+                    throw new Error('no model provided. unable to retrieve metadata for a missing model');
+                }
                 metadataService = config.has('metadata-service.base') || 'http://localhost:5000';
                 accessionNumber = accessionNumber && "&accessionNumber=" + accessionNumber || '';
-                url = metadataService + "/" + model + "?ticker=" + ticker + accessionNumber;
+                url = metadataService + "/" + model.modelName + "?ticker=" + ticker + accessionNumber;
                 return [4 /*yield*/, requestAsync({ method: 'GET', url: url, json: true })];
             case 1:
                 _a = (_b.sent()).body, body = _a === void 0 ? {} : _a;
