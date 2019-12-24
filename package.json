@@ -1,6 +1,6 @@
 {
   "name": "@postilion/utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "config": "^3.2.4",
     "moment": "^2.24.0",
-    "moment-range": "^4.0.2"
+    "moment-range": "^4.0.2",
+    "request": "^2.88.0"
   },
   "compierOptions": {
     "lib": [
@@ -23,8 +25,10 @@
     ]
   },
   "devDependencies": {
+    "@types/config": "0.0.36",
     "@types/moment-range": "^4.0.0",
     "@types/node": "^13.1.0",
+    "@types/request": "^2.48.4",
     "typescript": "^3.7.4"
   }
 }
