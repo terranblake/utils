@@ -1,6 +1,6 @@
 {
   "name": "@postilion/utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@types/config": "0.0.36",
     "@types/moment-range": "^4.0.0",
+    "@types/mongoose": "^5.5.35",
     "@types/node": "^13.1.0",
     "@types/request": "^2.48.4",
     "typescript": "^3.7.4"
