@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var dateTypes = require("./src/date-types");
 exports.dateTypes = dateTypes;
+var rssParsers = require("./src/rss-parsers");
+exports.rssParsers = rssParsers;
 var logger_1 = require("./src/logger");
 exports.logger = logger_1["default"];
 var metadata_1 = require("./src/metadata");

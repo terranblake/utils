@@ -37,10 +37,10 @@ exports["default"] = {
     identifierPrefixes: ['us-gaap', 'srt', 'gaap', 'currency', 'stpr', 'exch', 'country', 'dei'],
     identifierDocumentFlags: ['statement', 'disclosure'],
     supportedUnitTypes: ['measure', 'divide', 'multiply'],
-    supportedRegulators: {
-        'sec': {
-            'all': 'https://www.sec.gov/Archives/edgar/xbrlrss.all.xml',
-            'by_cik': function (cik, type, count) {
+    rssFeeds: {
+        sec: {
+            all: 'https://www.sec.gov/Archives/edgar/xbrlrss.all.xml',
+            by_cik: function (cik, type, count) {
                 if (cik === void 0) { cik = null; }
                 if (type === void 0) { type = '10-K'; }
                 if (count === void 0) { count = 1000; }

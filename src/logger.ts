@@ -1,12 +1,19 @@
-function info() {
+const formatLogs = (args: any[]) => {
+    return args.join(' ');
+}
+
+function info(...args: any[]) {
+    const formatted = formatLogs(args);
     console.log(arguments);
 }
 
-function warn() {
+function warn(...args: any[]) {
+    const formatted = formatLogs(args);
     console.warn(arguments);
 }
 
-function error() {
+function error(...args: any[]) {
+    const formatted = formatLogs(args);
     console.error(arguments)
 }
 

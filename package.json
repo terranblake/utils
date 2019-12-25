@@ -1,6 +1,6 @@
 {
   "name": "@postilion/utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@postilion/models": "^1.0.9",
+    "await-on": "^0.1.4",
     "colors": "^1.4.0",
     "config": "^3.2.4",
     "moment": "^2.24.0",
     "moment-range": "^4.0.2",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "rss-parser": "^3.7.3"
   },
   "compierOptions": {
     "lib": [

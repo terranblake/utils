@@ -37,10 +37,10 @@ export default {
     identifierPrefixes: ['us-gaap', 'srt', 'gaap', 'currency', 'stpr', 'exch', 'country', 'dei'],
     identifierDocumentFlags: ['statement', 'disclosure'],
     supportedUnitTypes: ['measure', 'divide', 'multiply'],
-    supportedRegulators: {
-        'sec': {
-            'all': 'https://www.sec.gov/Archives/edgar/xbrlrss.all.xml',
-            'by_cik': (cik = null, type = '10-K', count = 1000) => `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cik}&type=${type}&dateb=&owner=exclude&start=0&count=${count}&output=atom`,
+    rssFeeds: {
+        sec: {
+            all: 'https://www.sec.gov/Archives/edgar/xbrlrss.all.xml',
+            by_cik: (cik = null, type = '10-K', count = 1000) => `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cik}&type=${type}&dateb=&owner=exclude&start=0&count=${count}&output=atom`,
         }
     },
     factCurrencies: ['USD', 'iso4217_USD', 'iso4217-usd', 'usd', 'U_iso4217USD', 'iso4217:USD'],
