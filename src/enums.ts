@@ -5,8 +5,10 @@ export default {
         "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
     ],
     itemStates: [
-        'seeded',       // node has been found and needs to be crawled
-        'downloading',  // node has more data than initial state that needs to be gathered before branching can begin
+        'unseeded',     // node has been found and needs to be crawled
+        'seeding',      // node is being seeded for child nodes and metadata
+        'seeded',       // node has been seeded with data that can be used to crawl children nodes
+        'downloading',  // node has children nodes that need to be downloaded
         'downloaded',   // node peripheral information has been gathered. branching can begin
         'crawling',     // node is being crawled for child components (if part of model controller definition)
         'crawled',      // node has been crawled for all immediate neighbors/children (e.g. a filing is in the crawled state once all FilingDocument documents have been created)
