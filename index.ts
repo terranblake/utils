@@ -1,9 +1,6 @@
 import * as dateTypes from './src/date-types';
 export { dateTypes as dateTypes };
 
-import * as rssParsers from './src/rss-parsers';
-export { rssParsers as rssParsers };
-
 export { default as maths } from './src/maths';
 export { default as enums } from './src/enums';
 export { default as logger } from './src/logger';
