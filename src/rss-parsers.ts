@@ -54,6 +54,4 @@ export async function getLatestFilingFeed(ticker: string, source: string = 'sec'
 	return parsedRssEntries;
 }
 
-export default {
-	getLatestFilingFeed
-}
+export default { getLatestFilingFeed }

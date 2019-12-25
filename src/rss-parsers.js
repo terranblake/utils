@@ -107,6 +107,4 @@ function getLatestFilingFeed(ticker, source) {
     });
 }
 exports.getLatestFilingFeed = getLatestFilingFeed;
-exports["default"] = {
-    getLatestFilingFeed: getLatestFilingFeed
-};
+exports["default"] = { getLatestFilingFeed: getLatestFilingFeed };
