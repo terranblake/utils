@@ -7,6 +7,8 @@ exports["default"] = {
         "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
     ],
     itemStates: [
+        'unseeded',
+        'seeding',
         'seeded',
         'downloading',
         'downloaded',

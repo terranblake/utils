@@ -2,8 +2,6 @@
 exports.__esModule = true;
 var dateTypes = require("./src/date-types");
 exports.dateTypes = dateTypes;
-var rssParsers = require("./src/rss-parsers");
-exports.rssParsers = rssParsers;
 var maths_1 = require("./src/maths");
 exports.maths = maths_1["default"];
 var enums_1 = require("./src/enums");
