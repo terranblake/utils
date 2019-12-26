@@ -4,17 +4,17 @@ const formatLogs = (args: any[]) => {
 
 function info(...args: any[]) {
     const formatted = formatLogs(args);
-    console.log(arguments);
+    console.log(formatted);
 }
 
 function warn(...args: any[]) {
     const formatted = formatLogs(args);
-    console.warn(arguments);
+    console.warn(formatted);
 }
 
 function error(...args: any[]) {
     const formatted = formatLogs(args);
-    console.error(arguments)
+    console.error(formatted)
 }
 
 export default { info, warn, error }

@@ -9,7 +9,7 @@ function info() {
         args[_i] = arguments[_i];
     }
     var formatted = formatLogs(args);
-    console.log(arguments);
+    console.log(formatted);
 }
 function warn() {
     var args = [];
@@ -17,7 +17,7 @@ function warn() {
         args[_i] = arguments[_i];
     }
     var formatted = formatLogs(args);
-    console.warn(arguments);
+    console.warn(formatted);
 }
 function error() {
     var args = [];
@@ -25,6 +25,6 @@ function error() {
         args[_i] = arguments[_i];
     }
     var formatted = formatLogs(args);
-    console.error(arguments);
+    console.error(formatted);
 }
 exports["default"] = { info: info, warn: warn, error: error };

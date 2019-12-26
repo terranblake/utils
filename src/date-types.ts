@@ -14,7 +14,7 @@ const quarters = [
 	[moment("2019-10-01T00:00:00.000").year(1990), moment("2019-12-31T23:59:59.999").year(1990)],
 ]
 
-const getMostIntersectedRange = (inputRange, ranges) => {
+function getMostIntersectedRange (inputRange, ranges) {
 	const overlaps = {};
 	for (let r in ranges) {
 		const [start, end] = ranges[r];
@@ -38,7 +38,7 @@ const getMostIntersectedRange = (inputRange, ranges) => {
 	return result;
 }
 
-const getDateType = (value) => {
+function getDateType (value) {
 	if (!value.startDate) {
 		return 'instant';
 	}
@@ -56,7 +56,7 @@ const getDateType = (value) => {
 	return 'year';
 }
 
-const getYearReported = (value, dateType) => {
+function getYearReported (value, dateType) {
 	if (!dateType) {
 		dateType = this.getDateType(value);
 	}
@@ -90,7 +90,7 @@ const getYearReported = (value, dateType) => {
 		: endDate.year();
 }
 
-const getQuarterReported = (value, dateType) => {
+function getQuarterReported (value, dateType) {
 	if (!dateType) {
 		dateType = this.getDateType(value);
 	}

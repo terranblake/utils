@@ -1,5 +1,4 @@
 "use strict";
-var _this = this;
 exports.__esModule = true;
 var _moment = require("moment");
 var moment_range_1 = require("moment-range");
@@ -14,7 +13,7 @@ var quarters = [
     // quarter 4 usually spans October 1-December 31
     [moment("2019-10-01T00:00:00.000").year(1990), moment("2019-12-31T23:59:59.999").year(1990)],
 ];
-var getMostIntersectedRange = function (inputRange, ranges) {
+function getMostIntersectedRange(inputRange, ranges) {
     var overlaps = {};
     for (var r in ranges) {
         var _a = ranges[r], start = _a[0], end = _a[1];
@@ -32,8 +31,8 @@ var getMostIntersectedRange = function (inputRange, ranges) {
         return overlaps[curr] > overlaps[acc] ? curr : acc;
     }, -1);
     return result;
-};
-var getDateType = function (value) {
+}
+function getDateType(value) {
     if (!value.startDate) {
         return 'instant';
     }
@@ -45,10 +44,10 @@ var getDateType = function (value) {
         return 'quarter';
     }
     return 'year';
-};
-var getYearReported = function (value, dateType) {
+}
+function getYearReported(value, dateType) {
     if (!dateType) {
-        dateType = _this.getDateType(value);
+        dateType = this.getDateType(value);
     }
     if (dateType === 'instant') {
         return moment(value).year();
@@ -72,10 +71,10 @@ var getYearReported = function (value, dateType) {
     return daysInStartYear > daysInEndYear
         ? startDate.year()
         : endDate.year();
-};
-var getQuarterReported = function (value, dateType) {
+}
+function getQuarterReported(value, dateType) {
     if (!dateType) {
-        dateType = _this.getDateType(value);
+        dateType = this.getDateType(value);
     }
     if (dateType === 'instant') {
         return moment(value).quarter();
@@ -84,8 +83,8 @@ var getQuarterReported = function (value, dateType) {
         return moment(value.startDate).quarter();
     }
     var reportedRange = moment.range([moment(value.startDate), moment(value.endDate)]);
-    return Number(_this.getMostIntersectedRange(reportedRange, quarters));
-};
+    return Number(this.getMostIntersectedRange(reportedRange, quarters));
+}
 exports["default"] = {
     quarters: quarters,
     getDateType: getDateType,
