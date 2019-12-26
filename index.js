@@ -1,7 +1,5 @@
 "use strict";
 exports.__esModule = true;
-var dateTypes = require("./src/date-types");
-exports.dateTypes = dateTypes;
 var maths_1 = require("./src/maths");
 exports.maths = maths_1["default"];
 var enums_1 = require("./src/enums");
@@ -10,6 +8,8 @@ var logger_1 = require("./src/logger");
 exports.logger = logger_1["default"];
 var metadata_1 = require("./src/metadata");
 exports.metadata = metadata_1["default"];
+var date_types_1 = require("./src/date-types");
+exports.dateTypes = date_types_1["default"];
 var parsing_options_1 = require("./src/parsing-options");
 exports.parserOptions = parsing_options_1["default"];
 var role_by_financial_1 = require("./src/role-by-financial");
