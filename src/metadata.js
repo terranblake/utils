@@ -38,19 +38,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var config = require("config");
 var util_1 = require("util");
+var pluralize = require('pluralize');
 var request = require('request');
 var requestAsync = util_1.promisify(request);
 exports["default"] = (function (model, ticker, accessionNumber) { return __awaiter(void 0, void 0, void 0, function () {
-    var metadataService, url, _a, body;
+    var modelName, metadataService, url, _a, body;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
                 if (!model) {
                     throw new Error('no model provided. unable to retrieve metadata for a missing model');
                 }
+                modelName = String(pluralize(model.modelName)).toLowerCase();
                 metadataService = config.has('metadata-service.base') || 'http://localhost:5000';
                 accessionNumber = accessionNumber && "&accessionNumber=" + accessionNumber || '';
-                url = metadataService + "/" + model.modelName + "?ticker=" + ticker + accessionNumber;
+                url = metadataService + "/" + modelName + "?ticker=" + ticker + accessionNumber;
                 return [4 /*yield*/, requestAsync({ method: 'GET', url: url, json: true })];
             case 1:
                 _a = (_b.sent()).body, body = _a === void 0 ? {} : _a;
