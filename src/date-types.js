@@ -47,7 +47,7 @@ function getDateType(value) {
 }
 function getYearReported(value, dateType) {
     if (!dateType) {
-        dateType = this.getDateType(value);
+        dateType = getDateType(value);
     }
     if (dateType === 'instant') {
         return moment(value).year();
@@ -74,7 +74,7 @@ function getYearReported(value, dateType) {
 }
 function getQuarterReported(value, dateType) {
     if (!dateType) {
-        dateType = this.getDateType(value);
+        dateType = getDateType(value);
     }
     if (dateType === 'instant') {
         return moment(value).quarter();
@@ -83,7 +83,7 @@ function getQuarterReported(value, dateType) {
         return moment(value.startDate).quarter();
     }
     var reportedRange = moment.range([moment(value.startDate), moment(value.endDate)]);
-    return Number(this.getMostIntersectedRange(reportedRange, quarters));
+    return Number(getMostIntersectedRange(reportedRange, quarters));
 }
 exports["default"] = {
     quarters: quarters,
