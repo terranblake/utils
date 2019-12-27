@@ -1,6 +1,4 @@
 import { Model } from 'mongoose';
-
-import * as config from 'config';
 import { promisify } from 'util';
 
 const pluralize = require('pluralize');
@@ -13,7 +11,7 @@ export default async (model: Model<any, {}>, ticker: string, accessionNumber: st
     }
 
     const modelName = String(pluralize(model.modelName)).toLowerCase();
-    const metadataService = config.has('metadata-service.base') || 'http://localhost:5000';
+    const metadataService = process.env.METATDATA_SERVICE || 'http://localhost:5000';
 
     accessionNumber = accessionNumber && `&accessionNumber=${accessionNumber}` || '';
     const url = `${metadataService}/${modelName}?ticker=${ticker}${accessionNumber}`;

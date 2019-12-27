@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "flush": "rm -rf node_modules && rm package-lock.json",
+    "clean": "npm run flush && npm install",
     "push:publish": "git push && npm publish",
     "build": "tsc ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +17,7 @@
     "@postilion/models": "^1.1.0",
     "await-on": "^0.1.4",
     "colors": "^1.4.0",
-    "config": "^3.2.4",
+    "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "moment-range": "^4.0.2",
     "pluralize": "^8.0.0",
@@ -29,7 +31,6 @@
     ]
   },
   "devDependencies": {
-    "@types/config": "0.0.36",
     "@types/moment-range": "^4.0.0",
     "@types/mongoose": "^5.5.35",
     "@types/node": "^13.1.0",

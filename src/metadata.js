@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var config = require("config");
 var util_1 = require("util");
 var pluralize = require('pluralize');
 var request = require('request');
@@ -50,7 +49,7 @@ exports["default"] = (function (model, ticker, accessionNumber) { return __await
                     throw new Error('no model provided. unable to retrieve metadata for a missing model');
                 }
                 modelName = String(pluralize(model.modelName)).toLowerCase();
-                metadataService = config.has('metadata-service.base') || 'http://localhost:5000';
+                metadataService = process.env.METATDATA_SERVICE || 'http://localhost:5000';
                 accessionNumber = accessionNumber && "&accessionNumber=" + accessionNumber || '';
                 url = metadataService + "/" + modelName + "?ticker=" + ticker + accessionNumber;
                 return [4 /*yield*/, requestAsync({ method: 'GET', url: url, json: true })];
