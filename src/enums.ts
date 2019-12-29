@@ -1,4 +1,11 @@
 export default {
+    supported: {
+        regulators: ['sec'],
+        countries: ['usa'],
+        taxonomyFileFormats: ['xlsx'],
+        taxonomyLinkTypes: ['xbrl'],
+        exchanges: ['nasdaq', 'nyse', 'otc', 'otcbb', 'bats', 'nyse mkt', 'nyse arca', null]
+    },
     states: [
         "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
         "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND",
