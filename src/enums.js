@@ -4,7 +4,7 @@ exports["default"] = {
     supported: {
         regulators: ['sec'],
         countries: ['usa'],
-        taxonomyFileFormats: ['xlsx'],
+        taxonomyFileFormats: ['xlsx', 'zip', 'url'],
         taxonomyLinkTypes: ['xbrl'],
         exchanges: ['nasdaq', 'nyse', 'otc', 'otcbb', 'bats', 'nyse mkt', 'nyse arca', null]
     },
