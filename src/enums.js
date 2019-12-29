@@ -6,7 +6,19 @@ exports["default"] = {
         countries: ['usa'],
         taxonomyFileFormats: ['xlsx', 'zip', 'url'],
         taxonomyLinkTypes: ['xbrl'],
-        exchanges: ['nasdaq', 'nyse', 'otc', 'otcbb', 'bats', 'nyse mkt', 'nyse arca', null]
+        exchanges: ['nasdaq', 'nyse', 'otc', 'otcbb', 'bats', 'nyse mkt', 'nyse arca', null],
+        eventTypes: [
+            'DocumentSync',
+        ],
+        eventPriorities: {
+            1: 'Critical',
+            2: 'High',
+            3: 'Medium',
+            4: 'Low' // process this event when scheduled or in the next day
+        },
+        eventRefs: [
+            'Earnings' // a reference to earnings releases; this maps to either the Filing or Company model
+        ]
     },
     states: [
         "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
