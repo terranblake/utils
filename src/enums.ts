@@ -9,13 +9,13 @@ export default {
             'DocumentSync',         // a scheduled event for syncing data from an integration source
         ],
         eventPriorities: {
-            1: 'Critical',          // process this event rfn
-            2: 'High',              // process this event in the next minute
-            3: 'Medium',            // process this event in the next hour
-            4: 'Low'                // process this event when scheduled or in the next day
+            1: 'critical',          // process this event rfn
+            2: 'high',              // process this event in the next minute
+            3: 'medium',            // process this event in the next hour
+            4: 'low'                // process this event when scheduled or in the next day
         },
         eventRefs: [
-            'Earnings'              // a reference to earnings releases; this maps to either the Filing or Company model
+            'earnings'              // a reference to earnings releases; this maps to either the Filing or Company model
         ],
     },
     states: [
