@@ -3,7 +3,7 @@ import { default as logger } from './logger';
 function signum(decimals: any) {
 	decimals = Number(decimals);
 
-	if (!decimals || !isNaN(decimals)) {
+	if (!decimals) {
 		throw new Error(`cannot get signum (+/-) from invalid input ${decimals}`);
 	}
 
