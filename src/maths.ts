@@ -1,9 +1,9 @@
 import { default as logger } from './logger';
 
 function signum(decimals: any) {
-	decimals = Number(decimals);
+	decimals = Number(decimals.replace(/\+|\-/g, ''));
 
-	if (!decimals) {
+	if (!decimals || !isNaN(decimals)) {
 		throw new Error(`cannot get signum (+/-) from invalid input ${decimals}`);
 	}
 
