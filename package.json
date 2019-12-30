@@ -10,6 +10,17 @@
     "build": "tsc ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc ./index.ts"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -34,6 +45,7 @@
     "@types/mongoose": "^5.5.35",
     "@types/node": "^13.1.0",
     "@types/request": "^2.48.4",
+    "husky": "^3.1.0",
     "typescript": "^3.7.4"
   }
 }
