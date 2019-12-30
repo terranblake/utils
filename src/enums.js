@@ -11,13 +11,13 @@ exports["default"] = {
             'DocumentSync',
         ],
         eventPriorities: {
-            1: 'Critical',
-            2: 'High',
-            3: 'Medium',
-            4: 'Low' // process this event when scheduled or in the next day
+            1: 'critical',
+            2: 'high',
+            3: 'medium',
+            4: 'low' // process this event when scheduled or in the next day
         },
         eventRefs: [
-            'Earnings' // a reference to earnings releases; this maps to either the Filing or Company model
+            'earnings' // a reference to earnings releases; this maps to either the Filing or Company model
         ]
     },
     states: [
