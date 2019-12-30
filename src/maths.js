@@ -2,8 +2,7 @@
 exports.__esModule = true;
 var logger_1 = require("./logger");
 function signum(decimals) {
-    decimals = Number(decimals.replace(/\+|\-/g, ''));
-    if (!decimals || !isNaN(decimals)) {
+    if (!decimals) {
         throw new Error("cannot get signum (+/-) from invalid input " + decimals);
     }
     var sign = String(decimals.slice(0, 1));
