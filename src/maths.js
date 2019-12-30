@@ -3,7 +3,8 @@ exports.__esModule = true;
 var logger_1 = require("./logger");
 function signum(decimals) {
     if (!decimals) {
-        throw new Error("cannot get signum (+/-) from invalid input " + decimals);
+        logger_1["default"].error("cannot get signum (+/-) from invalid input " + decimals);
+        return;
     }
     var sign = String(decimals.slice(0, 1));
     sign = sign === '-'

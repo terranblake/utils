@@ -2,7 +2,8 @@ import { default as logger } from './logger';
 
 function signum(decimals: any) {
 	if (!decimals) {
-		throw new Error(`cannot get signum (+/-) from invalid input ${decimals}`);
+		logger.error(`cannot get signum (+/-) from invalid input ${decimals}`);
+		return;
 	}
 
 	let sign = String(decimals.slice(0, 1));
