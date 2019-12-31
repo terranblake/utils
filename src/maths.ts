@@ -23,7 +23,7 @@ function magnitude(value: string, decimals: string, sign: string) {
 		return Number(value);
 	}
 
-	if (decimals && !['+', '-'].includes(sign)) {
+	if (!sign || decimals && !['+', '-'].includes(sign)) {
 		logger.error(`cannot normalize[${value}] without +/- sign[${sign}] in decimals[${decimals}]`);
 		return value;
 	}
