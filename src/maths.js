@@ -20,7 +20,7 @@ function magnitude(value, decimals, sign) {
     if (Number(String(value).slice(value.length - 1)) === 0) {
         return Number(value);
     }
-    if (decimals && !['+', '-'].includes(sign)) {
+    if (!sign || decimals && !['+', '-'].includes(sign)) {
         logger_1["default"].error("cannot normalize[" + value + "] without +/- sign[" + sign + "] in decimals[" + decimals + "]");
         return value;
     }
