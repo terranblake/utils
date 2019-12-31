@@ -1,6 +1,8 @@
 "use strict";
 exports.__esModule = true;
 require('dotenv').config();
+var statements_1 = require("./src/statements");
+exports.statements = statements_1["default"];
 var maths_1 = require("./src/maths");
 exports.maths = maths_1["default"];
 var enums_1 = require("./src/enums");

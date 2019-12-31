@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+export { default as statements } from './src/statements';
+
 export { default as maths } from './src/maths';
 export { default as enums } from './src/enums';
 export { default as logger } from './src/logger';
