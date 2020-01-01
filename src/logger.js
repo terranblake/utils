@@ -32,7 +32,9 @@ function debug() {
     for (var _i = 0; _i < arguments.length; _i++) {
         args[_i] = arguments[_i];
     }
-    var formatted = formatLogs(args);
-    console.debug(formatted);
+    if (process.env.DEBUG) {
+        var formatted = formatLogs(args);
+        console.debug(formatted);
+    }
 }
 exports["default"] = { info: info, warn: warn, error: error, debug: debug };

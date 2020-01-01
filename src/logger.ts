@@ -18,8 +18,10 @@ function error(...args: any[]) {
 }
 
 function debug(...args: any[]) {
-    const formatted = formatLogs(args);
-    console.debug(formatted)
+    if (process.env.DEBUG) {
+        const formatted = formatLogs(args);
+        console.debug(formatted)
+    }
 }
 
 export default { info, warn, error, debug }
