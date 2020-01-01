@@ -17,4 +17,9 @@ function error(...args: any[]) {
     console.error(formatted)
 }
 
-export default { info, warn, error }
+function debug(...args: any[]) {
+    const formatted = formatLogs(args);
+    console.debug(formatted)
+}
+
+export default { info, warn, error, debug }

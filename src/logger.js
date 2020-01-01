@@ -27,4 +27,12 @@ function error() {
     var formatted = formatLogs(args);
     console.error(formatted);
 }
-exports["default"] = { info: info, warn: warn, error: error };
+function debug() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var formatted = formatLogs(args);
+    console.debug(formatted);
+}
+exports["default"] = { info: info, warn: warn, error: error, debug: debug };

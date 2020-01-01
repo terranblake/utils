@@ -69,7 +69,7 @@ exports["default"] = {
             }
         }
     },
-    factCurrencies: ['USD', 'iso4217_USD', 'iso4217-usd', 'usd', 'U_iso4217USD', 'iso4217:USD'],
+    factCurrencies: ['usd', 'iso4217_usd', 'iso4217-usd', 'u_iso4217usd', 'iso4217:usd'],
     // http://www.xbrl.org/utr/2017-07-12/utr.xml
     itemTypes: ['monetaryItemType', 'durationItemType', 'stringItemType', 'textItemType'],
     dateTypes: ['quarter', 'year', 'month', 'instant'],
