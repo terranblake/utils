@@ -33,7 +33,7 @@ function getMostIntersectedRange (inputRange, ranges) {
 		}
 
 		return overlaps[curr] > overlaps[acc] ? curr : acc;
-	}, -1);
+	}, 1);
 
 	return result;
 }
