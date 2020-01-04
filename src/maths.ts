@@ -2,7 +2,7 @@ import { default as logger } from './logger';
 
 function signum(decimals: any) {
 	if (!decimals) {
-		logger.error(`cannot get signum (+/-) from invalid input ${decimals}`);
+		logger.debug(`cannot get signum (+/-) from invalid input ${decimals}`);
 		return;
 	}
 
