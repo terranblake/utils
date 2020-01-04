@@ -40,7 +40,8 @@ export default {
     ],
     filingDocumentParsingOrder: {
         0: 'calculation',
-        1: 'instance'
+        1: 'definition',
+        2: 'instance'
     },
     filingDocumentTypes: ['calculation', 'presentation', 'label', 'definition', 'instance', 'schema', 'elements'],
     filingTypes: ['10-K', '10-Q', '20-F', 'S-1', 'POS AM', 'S-1/A', '485BPOS', '10-K/A', '497', '10-Q/A', '40-F', '8-K', '10-K405'],
