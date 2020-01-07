@@ -39,10 +39,10 @@ exports["default"] = {
         'failed' // node was  unsuccessful in completng one of the following steps. view the accompanying models `statusReason` field to find out why
     ],
     filingDocumentParsingOrder: {
-        0: 'calculation',
-        1: 'definition',
-        2: 'label',
-        3: 'presentation',
+        0: 'presentation',
+        1: 'calculation',
+        2: 'definition',
+        3: 'label',
         4: 'instance'
     },
     filingDocumentTypes: ['calculation', 'presentation', 'label', 'definition', 'instance', 'schema', 'elements'],
